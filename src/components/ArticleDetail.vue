@@ -2,14 +2,18 @@
     <div>
         <b-card
             :title="article.title"
-            :img-src="articleImage"
-            img-alt="Card image"
-            img-right
             class="mb-3"
         >
             <b-card-text>
                 {{ article.text }}
             </b-card-text>
+
+            <b-img
+                v-if="articleImage"
+                :src="articleImage"
+                fluid
+                right
+            ></b-img>
 
             <b-button
                 v-if="article.link"
