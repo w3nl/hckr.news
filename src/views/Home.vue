@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <article-list :articles="articles" />
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import axios from 'axios';
+import ArticleList from '@/components/ArticleList.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld,
+    ArticleList,
+  },
+  data() {
+    return {
+      articles: [],
+    };
+  },
+  mounted() {
+    this.getArticles();
+  },
+  methods: {
+    async getArticles() {
+      const endpoint = 'https://api.hckr.news/articles';
+
+      this.articles = await axios
+        .get(endpoint, { crossdomain: true })
+        .then(result => result.data);
+    },
   },
 };
 </script>

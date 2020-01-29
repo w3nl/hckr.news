@@ -1,12 +1,16 @@
 import { shallowMount } from '@vue/test-utils';
-import HelloWorld from '@/components/HelloWorld.vue';
+import ArticleList from '@/components/ArticleList.vue';
 
-describe('HelloWorld.vue', () => {
+describe('ArticleList.vue', () => {
   it('renders props.msg when passed', () => {
-    const msg = 'new message';
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg },
+    const articles = [
+      {
+        title: 'example',
+      },
+    ];
+    const wrapper = shallowMount(ArticleList, {
+      propsData: { articles },
     });
-    expect(wrapper.text()).toMatch(msg);
+    expect(wrapper.text()).toMatch(articles);
   });
 });
