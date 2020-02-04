@@ -20,7 +20,7 @@ const routes = [
     name: 'article',
     component: () => import(/* webpackChunkName: "article" */ '../views/Article.vue'),
     props: route => ({
-      articleId: route.params.articleId,
+      articleId: parseInt(route.params.articleId, 10),
     }),
   },
 ];

@@ -9,7 +9,12 @@
             <a
                 href="https://api.hckr.news/articles"
                 rel="noopener noreferrer"
-            >https://api.hckr.news/articles</a>
+            >https://api.hckr.news/articles</a><br>
+
+            Documentation: <a
+                href="https://api.hckr.news/documentation/v1.0.0"
+                rel="noopener noreferrer"
+            >https://api.hckr.news/documentation/v1.0.0</a>
         </p>
     </div>
 </template>

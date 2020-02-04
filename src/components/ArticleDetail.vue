@@ -15,6 +15,14 @@
                 right
             ></b-img>
 
+            <div v-if="article.categories && article.categories.length">
+                <b-badge
+                    v-for="(category, index) in article.categories"
+                    :key="index"
+                    variant="primary"
+                >{{ category.name }}</b-badge>
+            </div>
+
             <b-button
                 v-if="article.link"
                 :href="article.link"
