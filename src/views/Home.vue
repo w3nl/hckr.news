@@ -1,10 +1,10 @@
 <template>
     <div>
         <article-list :articles="articles" />
-        <button
+        <b-button
             v-if="hasMoreArticles"
             @click="moreArticles"
-        >More articles</button>
+        >More articles</b-button>
     </div>
 </template>
 
