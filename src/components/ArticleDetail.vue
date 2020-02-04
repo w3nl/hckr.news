@@ -12,7 +12,6 @@
                 v-if="articleImage"
                 :src="articleImage"
                 fluid
-                right
             ></b-img>
 
             <div v-if="article.categories && article.categories.length">
